@@ -10,7 +10,6 @@ const Joi = require('joi');
 const bcrypt = require('bcrypt');
 
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || 'localhost';
 const app = express();
 
 // Middlewares básicos
@@ -139,13 +138,13 @@ const swaggerOptions = {
             version: "1.0.0",
             description: `API para gerenciamento de usuários e filmes da Golden Movie Studio (GMS).
             Esta API permite a manipulação de informações de filmes e usuários, incluindo cadastro, atualização e busca.
-            UrlBase: http://localhost:3000`,
+            UrlBase: https://8i5962r1e8.execute-api.us-east-1.amazonaws.com/prod/cadastro`,
 
             contact: {
                 name: "Suporte GMS",
                 email: "suporte@gms.com"
             },
-            servers: [{ url: `http://${HOST}:${PORT}` }]
+            servers: [{ url: 'https://8i5962r1e8.execute-api.us-east-1.amazonaws.com/prod/'}]
         },
         tags: [
             {
@@ -229,13 +228,12 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
     const RESET = "\x1b[0m";
     const GREEN = "\x1b[32m";
     const YELLOW = "\x1b[33m"
-    //console.log(`${GREEN}**Url Base: http://${HOST}:${PORT}${RESET}`);
-    console.log(`${GREEN}**Url Base: http://127.0.0.1:8080/${RESET}`);
-    console.log(`${YELLOW}**Documentação : http://${HOST}:${PORT}/api-docs${RESET}`);
+    console.log(`${GREEN}**Servidor rodando na porta: ${PORT}${RESET}`);
+    console.log(`${YELLOW}**Documentação : http://localhost:${PORT}/api-docs${RESET}`);
 });
 
 /**

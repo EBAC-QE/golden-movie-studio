@@ -1,8 +1,5 @@
 const API_KEY = 'f7f22d30'; 
-const localURL = 'http://localhost:3000/cadastro';
-//const productionURL = 'https://8i5962r1e8.execute-api.us-east-1.amazonaws.com/cadastro';
-const productionURL = 'https://wyni6895be.execute-api.us-east-1.amazonaws.com/cadastro';
-const API_URL = window.location.hostname === 'localhost' ? localURL : productionURL;
+const API_URL = 'http://localhost:3000/cadastro';
 
 document.addEventListener('DOMContentLoaded', fetchRecommendations);
 document.getElementById('search-button').addEventListener('click', searchMovies);
