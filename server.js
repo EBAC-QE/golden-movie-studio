@@ -232,8 +232,8 @@ app.listen(PORT, () => {
     const RESET = "\x1b[0m";
     const GREEN = "\x1b[32m";
     const YELLOW = "\x1b[33m"
-    console.log(`${GREEN}**Servidor rodando na porta: ${PORT}${RESET}`);
-    console.log(`${YELLOW}**Documentação : http://localhost:${PORT}/api-docs${RESET}`);
+    console.log(`${GREEN}**Url Base: http://127.0.0.1:${PORT}/${RESET}`);
+    console.log(`${YELLOW}**Documentação : http://127.0.0.1:${PORT}/api-docs${RESET}`);
 });
 
 /**

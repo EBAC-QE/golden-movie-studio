@@ -1,5 +1,11 @@
 const API_KEY = 'f7f22d30'; 
-const API_URL = 'http://localhost:3000/cadastro';
+
+// Detecta automaticamente o ambiente
+const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+const API_BASE_URL = isProduction 
+    ? 'https://wyni6895be.execute-api.us-east-1.amazonaws.com' 
+    : 'http://127.0.0.1:8080';
+const API_URL = `${API_BASE_URL}/cadastro`;
 
 document.addEventListener('DOMContentLoaded', fetchRecommendations);
 document.getElementById('search-button').addEventListener('click', searchMovies);
