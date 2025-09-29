@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "nome": "teste ",
+    "sobrenome": "teste2",
+    "email": "teste@teste.com",
+    "telefone": "",
+    "senha": "$2b$10$y3JRVZZdy4CpvnXSGN7zrOthQNChYwgvLL26nIBH917n2HhsVevDC"
+  }
+]
